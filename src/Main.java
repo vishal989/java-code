@@ -1,6 +1,8 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +16,10 @@ public class Main {
         System.out.println(arr.length); // its a property in case of array but in case of String class its a method
 
 
+        List<String> list = List.of("Apple", "Beer", "Oranges", "bat", "cat");
+        list.stream().map(e -> e.toLowerCase()).forEach(e -> System.out.println(e));
+        list.stream().forEach(e -> System.out.println(e.length()));
 
+        IntStream.range(1, 11).forEach(e -> System.out.println(e));
     }
 }

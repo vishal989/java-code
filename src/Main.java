@@ -21,5 +21,7 @@ public class Main {
         list.stream().forEach(e -> System.out.println(e.length()));
 
         IntStream.range(1, 11).forEach(e -> System.out.println(e));
+
+        System.out.println(List.of(2, 3, 5, 8, 2).stream().max((n1, n2) -> Integer.compare(n1, n2)).get());
     }
 }

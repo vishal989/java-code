@@ -10,11 +10,13 @@ public class FunctionalClass {
 //        print(list);
         printWithFilter(list);
 
-        List<Integer> intList = List.of(9,3,4,62,22);
+        List<Integer> intList = List.of(9,3,4,62,22, 3, 4, 9, 99, 2);
         intList.stream().forEach(ele -> System.out.println(ele));
 
         int sum = intList.stream().reduce(0, (n1, n2) -> n1 + n2);
         System.out.println(sum);
+
+        intList.stream().distinct().sorted().map(e -> e * e).forEach(e -> System.out.println(e));
     }
 
 
